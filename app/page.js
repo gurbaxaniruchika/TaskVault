@@ -42,7 +42,7 @@ export default function Home() {
       src={"/scrumLogo.png"}
       alt="Logo"
       width={400}
-      height={90}
+      height={100}
       className="h-14 sm:h-24 w-auto object-contain"
       />
   </span>
@@ -53,7 +53,7 @@ offering a smooth and interactive experience. The site prioritizes speed, securi
 
 </p>
 <Link href="/onbording">
-<Button size="lg" className="mr-4">
+<Button size="lg" className="mb-10 mr-4">
     Get Started <ChevronRight size={18} />
 </Button>
 
@@ -109,7 +109,7 @@ offering a smooth and interactive experience. The site prioritizes speed, securi
                 </h3>
                 <p className="text-xl-mb-12">Join our team for new and better experiment.</p>
                 <Link href='onboarding'>
-              <Button size='lg' className="animate-bounce"> Start For free <ArrowRight className="ml-2 h-5 w-5"/>
+              <Button size='lg' className="mt-7 animate-bounce"> Start For free <ArrowRight className="ml-2 h-5 w-5"/>
                 </Button>  
                 </Link>
             </div>
