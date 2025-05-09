@@ -65,7 +65,7 @@ export default function Home() {
                 </Button>
 
             </Link>
-            <section id="features " className="bg-gray-900 py-20 px-5">
+            <section id="features " className="bg-gray-900 py-10 px-5">
                 <div className="container mx-auto">
                     <h3 className="text-3xl font-bold mb-12 text-center">Key Features </h3>
                     <div className="grid grid-clos-1 lg:grid-cols-3 gap-8">{features.map((feature, index) => {
@@ -88,7 +88,7 @@ export default function Home() {
 
             <section className="bg-gray-900 py-20 px-5">
                 <div className="container mx-auto">
-                    <h3 className="text-3xl font-bold mb-12 text-center">
+                    <h3 className="text-3xl font-bold mb-5 text-center">
                         Frequently Asked Question
                     </h3>
                     <Accordion type="single" collapsible className="w-full">
@@ -106,7 +106,7 @@ export default function Home() {
         </section>
 
 
-        <section className=" py-20 text-center px-5 ">
+        <section className=" py-5 text-center px-5 ">
             <div className="container mx-auto">
                 <h3 className="text-3xl font-bold mb-5 text-center">
                     Ready to Transform Your Workflow
