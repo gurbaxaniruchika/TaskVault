@@ -34,9 +34,9 @@ export default function Home() {
     return <div className="min-h-screen">
         {/* Hero Section*/}
         <section className="container mx-auto py-20 text-center">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font:extrabold gradient-title pb-6 flex flex-col">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
                 Streamline Your Workflow  <br />
-                <span className="flex mx-auto gap-3 sm:gap-4 items-center">
+                <span className="flex mx-auto gap-3 sm:gap-4 items-center justify-center mb-7">
                     with{""}
                     <Image
                         src={"/scrumLogo.png"}
@@ -47,6 +47,7 @@ export default function Home() {
                     />
                 </span>
             </h1>
+
             <p className="text-xl text-grey-300 mb-10 max-w-3xl mx-auto">Taskvault  is a sleek, minimalist website with an intuitive, user-friendly interface focused on seamless
                 navigation and engaging content. It features a responsive design that adapts perfectly across devices,
                 offering a smooth and interactive experience. The site prioritizes speed, security, and personalized content for every user.
@@ -100,9 +101,6 @@ export default function Home() {
                             </AccordionItem>
                         ))}
                     </Accordion>
-
-
-
                 </div>
             </section>
         </section>
