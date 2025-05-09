@@ -1,7 +1,10 @@
+'use client';
+
 import { Suspense } from "react";
 import { getUserIssues } from "@/actions/organizations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import IssueCard from "@/components/issue-card";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from "recharts";
 
 export default async function UserIssues({ userId }) {
   const issues = await getUserIssues(userId);
@@ -17,9 +20,33 @@ export default async function UserIssues({ userId }) {
     (issue) => issue.reporter.clerkUserId === userId
   );
 
+  const chartData = [
+    {
+      name: "Assigned",
+      count: assignedIssues.length,
+    },
+    {
+      name: "Reported",
+      count: reportedIssues.length,
+    },
+  ];
+
   return (
     <>
       <h1 className="text-4xl font-bold gradient-title mb-4">My Issues</h1>
+
+      <div style={{ width: "100%", height: 300, marginBottom: "20px" }}>
+        <ResponsiveContainer>
+          <BarChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="count" fill="#6366f1" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
 
       <Tabs defaultValue="assigned" className="w-full">
         <TabsList>
