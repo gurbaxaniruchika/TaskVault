@@ -40,4 +40,3 @@ TaskVault is a powerful, full-featured Jira clone designed for agile teams to ma
 | Deployment  | GitHub Actions, Docker Compose |
 
 ## 📁 Project Structure
-
