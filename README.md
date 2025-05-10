@@ -36,17 +36,12 @@ Node JS
 
 PostgreSQL (Multi-tenant database)
 
-JWT (Authentication & security)
+Clerk (Authentication & security)
 
 🔜 Frontend
 React.js (SPA with routing and dynamic pages)
 
 TailwindCSS & ShadCN (Modern, accessible UI)
-
-🧪 Testing
-JUnit & Mockito (Backend tests)
-
-Jest & React Testing Library (Frontend tests)
 
 🧱 Database Schema
 users – Stores user details with roles and organization ID
@@ -56,7 +51,7 @@ organizations – Org-specific metadata
 issues – Issue tracker with priority, status, and ownership
 
 📌 Key Modules
-User Authentication (JWT-based)
+User Authentication (Clerk)
 
 Organization Switching
 
@@ -71,7 +66,7 @@ Admin Controls and Analytics
 
 PostgreSQL schema
 
-JWT auth + org filtering
+org filtering - Clerk
 
 🔹 Phase 2 – Frontend
 React dashboard
@@ -82,8 +77,6 @@ Tailwind & ShadCN styling
 
 🔹 Phase 3 – Integration
 Connect frontend to backend
-
-JWT handling in localStorage
 
 Protected routes
 
