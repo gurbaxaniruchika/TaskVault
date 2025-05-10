@@ -2,7 +2,7 @@
 A powerful, scalable issue-tracking system built for modern organizations, supporting multi-tenancy, role-based access, real-time updates, and rich analytics.
 
 🚀 Overview
-TaskVault is a web-based issue tracking system designed to handle multiple departments or clients under one unified system. Built using Spring Boot, PostgreSQL, and React.js, it provides a secure, scalable solution with role-based access control, real-time notifications, and analytics for efficient issue resolution.
+TaskVault is a web-based issue tracking system designed to handle multiple departments or clients under one unified system. Built PostgreSQL, and React.js, it provides a secure, scalable solution with role-based access control, real-time notifications, and analytics for efficient issue resolution.
 
 🎯 Problem Statement
 Traditional issue trackers often fall short for organizations with complex structures:
@@ -68,7 +68,6 @@ Admin Controls and Analytics
 
 📅 Development Plan
 🔹 Phase 1 – Backend
-Spring Boot APIs
 
 PostgreSQL schema
 
@@ -99,6 +98,26 @@ Admin stats and reports
 🤖 AI for issue prioritization
 
 📂 ERP module integration (HR, Finance)
+
+
+## 📄 Environment Variables
+
+
+Make sure to create a .env file in the root of your project with the following variables:
+
+
+```bash
+DATABASE_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+```
+
 
 ## 📦 How to Run the Project Locally
 npm run dev
