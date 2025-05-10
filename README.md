@@ -1,75 +1,105 @@
-# 🚀 TaskVault – Multi-Tenant ERP-Style Issue Tracker
+🧠 TaskVault – Multi-Tenant ERP-Style Issue Tracker
+A powerful, scalable issue-tracking system built for modern organizations, supporting multi-tenancy, role-based access, real-time updates, and rich analytics.
 
-TaskVault is a modern, scalable issue tracking system designed for organizations that need to manage projects, teams, and clients in one unified platform. With full support for multi-tenancy, role-based access control, and real-time updates, it enables teams to track, assign, and resolve issues efficiently across departments or clients.
+🚀 Overview
+TaskVault is a web-based issue tracking system designed to handle multiple departments or clients under one unified system. Built using Spring Boot, PostgreSQL, and React.js, it provides a secure, scalable solution with role-based access control, real-time notifications, and analytics for efficient issue resolution.
 
----
+🎯 Problem Statement
+Traditional issue trackers often fall short for organizations with complex structures:
 
-## 📖 Overview
+❌ Single-tenant limitations
 
-In today’s fast-paced development environments, organizations often face the challenge of tracking issues across multiple teams, departments, or clients. Traditional tools either lack flexibility or fail to scale as needs grow.
+❌ Poor role-based access control
 
-**TaskVault** addresses this by offering:
-- Centralized issue tracking for multiple tenants
-- Fine-grained access control based on user roles
-- Clean, responsive UI for seamless navigation
-- Integration-ready architecture for future ERP modules
+❌ Limited scalability and analytics
 
-Whether you're managing bugs in a software project, service requests in an IT department, or tickets across business units — TaskVault adapts to your workflow.
+TaskVault solves this by offering a multi-tenant architecture, structured user roles (Admin, Manager, Employee), and responsive dashboards.
 
----
+🧩 Core Features
+🔐 Role-Based Access Control (RBAC) – Secure permissions per user role
 
-## ✨ Key Features
+🏢 Multi-Tenant Support – Isolated data per organization
 
-- 🏢 **Multi-Tenant Architecture**  
-  Each department or client gets an isolated workspace within a shared system.
+🧾 Issue Management – Create, prioritize, assign, and resolve issues
 
-- 🔐 **Role-Based Access Control (RBAC)**  
-  Users are assigned roles like Admin, Manager, or Engineer, with custom permissions and restricted data access.
+📊 Admin Dashboard – Visualize issue stats and team activity
 
-- ✅ **Issue Lifecycle Management**  
-  Create, categorize, prioritize, assign, and resolve issues — all from a unified dashboard.
+🔔 Real-Time Notifications – Stay updated on changes and escalations
 
-- 📊 **Admin Dashboard**  
-  Visual summaries of system activity, user engagement, and issue resolution trends.
+📱 Responsive Design – Optimized for web and mobile
 
-- 📬 **Real-Time Notifications**  
-  Get instant updates on issue status, assignments, and escalations.
+📈 Analytics & Reports – Track trends, resolution times, and performance
 
-- 📱 **Fully Responsive UI**  
-  Designed to work seamlessly on desktops, tablets, and smartphones.
+🛠️ Technology Stack
+🔙 Backend
+Node JS
 
-- 🔁 **Secure API Integration**  
-  JWT authentication ensures secure communication between frontend and backend.
+PostgreSQL (Multi-tenant database)
 
----
+JWT (Authentication & security)
 
-## 🧰 Technology Stack
+🔜 Frontend
+React.js (SPA with routing and dynamic pages)
 
-### 🔙 Backend
-- **Spring Boot** – RESTful API development and business logic
-- **PostgreSQL** – Multi-tenant database design
-- **JWT** – Secure authentication and access control
+TailwindCSS & ShadCN (Modern, accessible UI)
 
-### 🔜 Frontend
-- **React.js** – Modern component-based UI
-- **TailwindCSS** – Utility-first CSS framework for fast styling
-- **ShadCN UI** – Accessible and pre-built UI components
+🧪 Testing
+JUnit & Mockito (Backend tests)
 
-### 🔐 Auth & Security
-- JWT-based route protection
-- Role-based permission checks
-- Encrypted tokens stored securely
+Jest & React Testing Library (Frontend tests)
 
-### 🔗 Integration & Testing
-- Axios – For frontend-backend communication
-- JUnit & Mockito – Unit testing in Spring Boot
-- Jest & React Testing Library – Testing React components
+🧱 Database Schema
+users – Stores user details with roles and organization ID
 
----
+organizations – Org-specific metadata
+
+issues – Issue tracker with priority, status, and ownership
+
+📌 Key Modules
+User Authentication (JWT-based)
+
+Organization Switching
+
+Issue Lifecycle Management
+
+Notifications and Alerts
+
+Admin Controls and Analytics
+
+📅 Development Plan
+🔹 Phase 1 – Backend
+Spring Boot APIs
+
+PostgreSQL schema
+
+JWT auth + org filtering
+
+🔹 Phase 2 – Frontend
+React dashboard
+
+Role-based navigation
+
+Tailwind & ShadCN styling
+
+🔹 Phase 3 – Integration
+Connect frontend to backend
+
+JWT handling in localStorage
+
+Protected routes
+
+🔹 Final Phase – Add-ons
+Auto-assignment of engineers
+
+Admin stats and reports
+
+📌 Future Enhancements
+📱 Mobile app (React Native)
+
+🤖 AI for issue prioritization
+
+📂 ERP module integration (HR, Finance)
 
 ## 📦 How to Run the Project Locally
+npm run dev
 
-### Backend
-```bash
-cd backend
-./mvnw spring-boot:run
