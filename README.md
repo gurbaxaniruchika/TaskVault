@@ -1,105 +1,116 @@
-🧠 TaskVault – Multi-Tenant ERP-Style Issue Tracker
-A powerful, scalable issue-tracking system built for modern organizations, supporting multi-tenancy, role-based access, real-time updates, and rich analytics.
+# 🧠 TaskVault – Scalable Multi-Tenant Issue Tracker
 
-🚀 Overview
-TaskVault is a web-based issue tracking system designed to handle multiple departments or clients under one unified system. Built PostgreSQL, and React.js, it provides a secure, scalable solution with role-based access control, real-time notifications, and analytics for efficient issue resolution.
+A powerful, ERP-style issue-tracking system tailored for modern organizations. TaskVault supports **multi-tenancy**, **role-based access**, **real-time updates**, and **rich analytics** to streamline issue resolution across diverse teams and departments.
 
-🎯 Problem Statement
-Traditional issue trackers often fall short for organizations with complex structures:
+---
 
-❌ Single-tenant limitations
+## 🚀 Overview
 
-❌ Poor role-based access control
+**TaskVault** is a web-based, full-stack issue tracker built with **PostgreSQL**, **Node.js**, and **React.js**. It is designed for organizations managing multiple clients or departments under one platform, delivering secure, scalable, and insightful tracking capabilities.
 
-❌ Limited scalability and analytics
+---
 
-TaskVault solves this by offering a multi-tenant architecture, structured user roles (Admin, Manager, Employee), and responsive dashboards.
+## 🎯 Problem Statement
 
-🧩 Core Features
-🔐 Role-Based Access Control (RBAC) – Secure permissions per user role
+Traditional issue-tracking tools often fall short when scaling across departments or client teams:
 
-🏢 Multi-Tenant Support – Isolated data per organization
+- ❌ Single-tenant limitations  
+- ❌ Weak role-based access control  
+- ❌ Limited analytics and scalability
 
-🧾 Issue Management – Create, prioritize, assign, and resolve issues
+**TaskVault** addresses these challenges with:
 
-📊 Admin Dashboard – Visualize issue stats and team activity
+- 🏢 Multi-tenant architecture  
+- 🔐 Structured user roles (Admin, Manager, Employee)  
+- 📊 Responsive dashboards and analytics
 
-🔔 Real-Time Notifications – Stay updated on changes and escalations
+---
 
-📱 Responsive Design – Optimized for web and mobile
+## 🧩 Core Features
 
-📈 Analytics & Reports – Track trends, resolution times, and performance
+- 🔐 **Role-Based Access Control (RBAC)** – Secure, role-specific permissions  
+- 🏢 **Multi-Tenant Support** – Isolated data per organization/client  
+- 🧾 **Comprehensive Issue Management** – Create, prioritize, assign, resolve  
+- 📊 **Admin Dashboard** – Visualize issue metrics and team activity  
+- 🔔 **Real-Time Notifications** – Stay instantly updated  
+- 📱 **Responsive UI** – Optimized for desktop and mobile  
+- 📈 **Analytics & Reports** – Track trends, SLA adherence, and performance  
 
-🛠️ Technology Stack
-🔙 Backend
-Node JS
+---
 
-PostgreSQL (Multi-tenant database)
+## 🛠️ Technology Stack
 
-Clerk (Authentication & security)
+### 🔙 Backend
 
-🔜 Frontend
-React.js (SPA with routing and dynamic pages)
+- **Node.js**
+- **PostgreSQL** (multi-tenant schema)
+- **Clerk** – Authentication and security
 
-TailwindCSS & ShadCN (Modern, accessible UI)
+### 🔜 Frontend
 
-🧱 Database Schema
-users – Stores user details with roles and organization ID
+- **React.js** – SPA with dynamic routing
+- **Tailwind CSS** & **ShadCN** – Modern, accessible UI components
 
-organizations – Org-specific metadata
+---
 
-issues – Issue tracker with priority, status, and ownership
+## 🧱 Database Schema Overview
 
-📌 Key Modules
-User Authentication (Clerk)
+| Table           | Description                                |
+|------------------|--------------------------------------------|
+| `users`          | User data, roles, and organization linkage |
+| `organizations`  | Organization-specific metadata             |
+| `issues`         | Issue records with status, priority, and ownership |
 
-Organization Switching
+---
 
-Issue Lifecycle Management
+## 📌 Key Modules
 
-Notifications and Alerts
+- ✅ User Authentication (Clerk)  
+- 🔄 Organization Switching  
+- 🔧 Issue Lifecycle Management  
+- 🔔 Notifications & Alerts  
+- 📊 Admin Controls & Analytics
 
-Admin Controls and Analytics
+---
 
-📅 Development Plan
-🔹 Phase 1 – Backend
+## 📅 Development Roadmap
 
-PostgreSQL schema
+### Phase 1 – Backend
 
-org filtering - Clerk
+- PostgreSQL multi-tenant schema  
+- Organization filtering via Clerk  
 
-🔹 Phase 2 – Frontend
-React dashboard
+### Phase 2 – Frontend
 
-Role-based navigation
+- React dashboard setup  
+- Role-based navigation  
+- Tailwind CSS & ShadCN styling  
 
-Tailwind & ShadCN styling
+### Phase 3 – Integration
 
-🔹 Phase 3 – Integration
-Connect frontend to backend
+- API integration  
+- Protected routes & session handling  
 
-Protected routes
+### Final Phase – Add-ons
 
-🔹 Final Phase – Add-ons
-Auto-assignment of engineers
+- Auto-assignment of engineers  
+- Admin statistics & reporting tools  
 
-Admin stats and reports
+---
 
-📌 Future Enhancements
-📱 Mobile app (React Native)
+## 🔮 Future Enhancements
 
-🤖 AI for issue prioritization
+- 📱 Mobile App (React Native)  
+- 🤖 AI-based Issue Prioritization  
+- 📂 ERP Module Integration (HR, Finance, etc.)  
 
-📂 ERP module integration (HR, Finance)
-
+---
 
 ## 📄 Environment Variables
 
+Create a `.env` file in the root directory with the following keys:
 
-Make sure to create a .env file in the root of your project with the following variables:
-
-
-```bash
+```env
 DATABASE_URL=
 
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -111,7 +122,45 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
 ```
 
+---
 
-## 📦 How to Run the Project Locally
-npm run dev
+## 💻 Running the Project Locally
 
+To run TaskVault locally, follow these steps:
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/taskvault.git
+   cd taskvault
+   ```
+
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**  
+   Create a `.env` file in the root folder and add all required variables listed above.
+
+4. **Run the development server**  
+   ```bash
+   npm run dev
+   ```
+
+5. Visit `http://localhost:3000` to start using the application.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to **TaskVault**! To contribute:
+
+1. Fork the repository  
+2. Create a new branch (`git checkout -b feature-name`)  
+3. Commit your changes (`git commit -m "Add feature"`)  
+4. Push to the branch (`git push origin feature-name`)  
+5. Create a Pull Request
+
+Feel free to open issues for suggestions or bugs. Let's build something great together!
+
+---
